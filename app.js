@@ -79,3 +79,13 @@ let list = languages.map((x) => {
 })
 
 menu.append(...list);
+
+menu.insertAdjacentHTML('beforebegin', '<h2>Web Technology</h2>');
+menu.insertAdjacentHTML('afterbegin', '<li>Dart</li>');
+menu.insertAdjacentHTML('beforeend', '<li>IOS</li>');
+menu.insertAdjacentHTML('afterend', '<p>Thanks for Stay with us.</p>')
+
+let li = document.createElement('li');
+li.textContent = "Linux OS";
+
+menu.replaceChild(li, menu.lastElementChild);
