@@ -41,14 +41,41 @@
 
 
 
-let menu = document.querySelector("#menu");
+// let menu = document.querySelector("#menu");
 
-function createMenu(name){
-    let li = document.createElement("li");
-    li.textContent = name;
+// function createMenu(name){
+//     let li = document.createElement("li");
+//     li.textContent = name;
+//     return li;
+// }
+
+// menu.appendChild(createMenu("Tanvir"));
+// menu.appendChild(createMenu("Tarek"));
+// menu.appendChild(createMenu("Tasrif"));
+
+
+// let languages = ['C', 'Python', 'PHP', 'Java', 'JavaScript', 'Android', 'TypeScript', 'C#', 'Ruby', 'HTML', 'CSS', 'React JS'];
+
+// let menu = document.querySelector('#menu');
+// let fragment = new DocumentFragment();
+
+// languages.forEach((x) => {
+//     let li = document.createElement('li');
+//     li.innerHTML = x;
+//     fragment.appendChild(li);
+// })
+
+// menu.appendChild(fragment);
+
+let languages = ['C', 'Python', 'PHP', 'Java', 'JavaScript', 'Android', 'TypeScript', 'C#', 'Ruby', 'HTML', 'CSS', 'React JS'];
+
+let menu = document.querySelector('#menu');
+
+
+let list = languages.map((x) => {
+    let li = document.createElement('li');
+    li.textContent = x;
     return li;
-}
+})
 
-menu.appendChild(createMenu("Tanvir"));
-menu.appendChild(createMenu("Tarek"));
-menu.appendChild(createMenu("Tasrif"));
+menu.append(...list);
