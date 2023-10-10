@@ -14,28 +14,41 @@
 // const menu = document.querySelector("#menu");
 // menu.appendChild(li);
 
-let h1 = document.createElement('h1');
-h1.textContent = 'Here are list items: ';
+// let h1 = document.createElement('h1');
+// h1.textContent = 'Here are list items: ';
 
-let ul = document.createElement('ul');
-ul.id = 'id1';
+// let ul = document.createElement('ul');
+// ul.id = 'id1';
 
-let li1 = document.createElement('li');
-li1.textContent = 'Home';
-ul.appendChild(li1);
+// let li1 = document.createElement('li');
+// li1.textContent = 'Home';
+// ul.appendChild(li1);
 
-let li2 = document.createElement('li');
-li2.textContent = 'About';
-ul.appendChild(li2);
+// let li2 = document.createElement('li');
+// li2.textContent = 'About';
+// ul.appendChild(li2);
 
-let li3 = document.createElement('li');
-li3.textContent = 'Contact';
-ul.appendChild(li3);
+// let li3 = document.createElement('li');
+// li3.textContent = 'Contact';
+// ul.appendChild(li3);
 
-let script = document.createElement('script');
-script.src = "./application.js"
+// let script = document.createElement('script');
+// script.src = "./application.js"
 
-document.body.appendChild(h1);
-document.body.appendChild(ul);
-document.body.appendChild(script);
+// document.body.appendChild(h1);
+// document.body.appendChild(ul);
+// document.body.appendChild(script);
 
+
+
+let menu = document.querySelector("#menu");
+
+function createMenu(name){
+    let li = document.createElement("li");
+    li.textContent = name;
+    return li;
+}
+
+menu.appendChild(createMenu("Tanvir"));
+menu.appendChild(createMenu("Tarek"));
+menu.appendChild(createMenu("Tasrif"));
